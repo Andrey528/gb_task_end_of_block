@@ -16,17 +16,13 @@ Console.WriteLine($"Пользователь вводит с клавиатур�
 
 string[] usrArray = Console.ReadLine()!.Split(',');
 List<string> newArray = new List<string>();
-int index2 = 0;
 int stringLength = 3;
 Random r = new Random();
 
-for (int index1 = 0; index1 < usrArray.Length; index1++)
+for (int index = 0; index < usrArray.Length; index++)
 {
-    if (usrArray[index1].Length <= stringLength)
-    {
-        newArray.Add(usrArray[index1]);
-        index2++;
-    }
+    if (usrArray[index].Length <= stringLength)
+        newArray.Add(usrArray[index]);
 }
 
 Print_array(newArray);
